@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA757AA41A8E64A700D4751C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA757AA31A8E64A700D4751C /* AppDelegate.swift */; };
+		BA757AA91A8E64A700D4751C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA757AA71A8E64A700D4751C /* Main.storyboard */; };
+		BA757AAB1A8E64A700D4751C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA757AAA1A8E64A700D4751C /* Images.xcassets */; };
+		BA757AAE1A8E64A700D4751C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA757AAC1A8E64A700D4751C /* LaunchScreen.xib */; };
+		BA757ABA1A8E64A700D4751C /* GradebookExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA757AB91A8E64A700D4751C /* GradebookExampleTests.swift */; };
+		BA757AC61A8E64BF00D4751C /* GradebookURLLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BA757AC51A8E64BF00D4751C /* GradebookURLLoader.m */; };
+		BA757AC91A8E653800D4751C /* NSString+Base64Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = BA757AC81A8E653800D4751C /* NSString+Base64Encoding.m */; };
+		EFA910EA1AA6319000AA7045 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA910E91AA6319000AA7045 /* SwiftyJSON.swift */; };
+		EFA910EC1AA6368000AA7045 /* SectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA910EB1AA6368000AA7045 /* SectionsTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA757AB41A8E64A700D4751C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA757A961A8E64A700D4751C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA757A9D1A8E64A700D4751C;
+			remoteInfo = GradebookExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA757A9E1A8E64A700D4751C /* GradebookExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradebookExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA757AA21A8E64A700D4751C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA757AA31A8E64A700D4751C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BA757AA81A8E64A700D4751C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA757AAA1A8E64A700D4751C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BA757AAD1A8E64A700D4751C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BA757AB31A8E64A700D4751C /* GradebookExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GradebookExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA757AB81A8E64A700D4751C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA757AB91A8E64A700D4751C /* GradebookExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradebookExampleTests.swift; sourceTree = "<group>"; };
+		BA757AC31A8E64BF00D4751C /* GradebookExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GradebookExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		BA757AC41A8E64BF00D4751C /* GradebookURLLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradebookURLLoader.h; sourceTree = "<group>"; };
+		BA757AC51A8E64BF00D4751C /* GradebookURLLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradebookURLLoader.m; sourceTree = "<group>"; };
+		BA757AC71A8E653800D4751C /* NSString+Base64Encoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64Encoding.h"; sourceTree = "<group>"; };
+		BA757AC81A8E653800D4751C /* NSString+Base64Encoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64Encoding.m"; sourceTree = "<group>"; };
+		EFA910E91AA6319000AA7045 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		EFA910EB1AA6368000AA7045 /* SectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA757A9B1A8E64A700D4751C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA757AB01A8E64A700D4751C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA757A951A8E64A700D4751C = {
+			isa = PBXGroup;
+			children = (
+				BA757AA01A8E64A700D4751C /* GradebookExample */,
+				BA757AB61A8E64A700D4751C /* GradebookExampleTests */,
+				BA757A9F1A8E64A700D4751C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA757A9F1A8E64A700D4751C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA757A9E1A8E64A700D4751C /* GradebookExample.app */,
+				BA757AB31A8E64A700D4751C /* GradebookExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA757AA01A8E64A700D4751C /* GradebookExample */ = {
+			isa = PBXGroup;
+			children = (
+				EFA910E91AA6319000AA7045 /* SwiftyJSON.swift */,
+				BA757AA31A8E64A700D4751C /* AppDelegate.swift */,
+				BA757AA71A8E64A700D4751C /* Main.storyboard */,
+				EFA910EB1AA6368000AA7045 /* SectionsTableViewController.swift */,
+				BA757AAA1A8E64A700D4751C /* Images.xcassets */,
+				BA757AAC1A8E64A700D4751C /* LaunchScreen.xib */,
+				BA757AA11A8E64A700D4751C /* Supporting Files */,
+			);
+			path = GradebookExample;
+			sourceTree = "<group>";
+		};
+		BA757AA11A8E64A700D4751C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA757AC41A8E64BF00D4751C /* GradebookURLLoader.h */,
+				BA757AC51A8E64BF00D4751C /* GradebookURLLoader.m */,
+				BA757AC71A8E653800D4751C /* NSString+Base64Encoding.h */,
+				BA757AC81A8E653800D4751C /* NSString+Base64Encoding.m */,
+				BA757AC31A8E64BF00D4751C /* GradebookExample-Bridging-Header.h */,
+				BA757AA21A8E64A700D4751C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA757AB61A8E64A700D4751C /* GradebookExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA757AB91A8E64A700D4751C /* GradebookExampleTests.swift */,
+				BA757AB71A8E64A700D4751C /* Supporting Files */,
+			);
+			path = GradebookExampleTests;
+			sourceTree = "<group>";
+		};
+		BA757AB71A8E64A700D4751C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA757AB81A8E64A700D4751C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA757A9D1A8E64A700D4751C /* GradebookExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA757ABD1A8E64A700D4751C /* Build configuration list for PBXNativeTarget "GradebookExample" */;
+			buildPhases = (
+				BA757A9A1A8E64A700D4751C /* Sources */,
+				BA757A9B1A8E64A700D4751C /* Frameworks */,
+				BA757A9C1A8E64A700D4751C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GradebookExample;
+			productName = GradebookExample;
+			productReference = BA757A9E1A8E64A700D4751C /* GradebookExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA757AB21A8E64A700D4751C /* GradebookExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA757AC01A8E64A700D4751C /* Build configuration list for PBXNativeTarget "GradebookExampleTests" */;
+			buildPhases = (
+				BA757AAF1A8E64A700D4751C /* Sources */,
+				BA757AB01A8E64A700D4751C /* Frameworks */,
+				BA757AB11A8E64A700D4751C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA757AB51A8E64A700D4751C /* PBXTargetDependency */,
+			);
+			name = GradebookExampleTests;
+			productName = GradebookExampleTests;
+			productReference = BA757AB31A8E64A700D4751C /* GradebookExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA757A961A8E64A700D4751C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "John Bellardo";
+				TargetAttributes = {
+					BA757A9D1A8E64A700D4751C = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					BA757AB21A8E64A700D4751C = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = BA757A9D1A8E64A700D4751C;
+					};
+				};
+			};
+			buildConfigurationList = BA757A991A8E64A700D4751C /* Build configuration list for PBXProject "GradebookExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA757A951A8E64A700D4751C;
+			productRefGroup = BA757A9F1A8E64A700D4751C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA757A9D1A8E64A700D4751C /* GradebookExample */,
+				BA757AB21A8E64A700D4751C /* GradebookExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA757A9C1A8E64A700D4751C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA757AA91A8E64A700D4751C /* Main.storyboard in Resources */,
+				BA757AAE1A8E64A700D4751C /* LaunchScreen.xib in Resources */,
+				BA757AAB1A8E64A700D4751C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA757AB11A8E64A700D4751C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA757A9A1A8E64A700D4751C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFA910EC1AA6368000AA7045 /* SectionsTableViewController.swift in Sources */,
+				BA757AA41A8E64A700D4751C /* AppDelegate.swift in Sources */,
+				BA757AC61A8E64BF00D4751C /* GradebookURLLoader.m in Sources */,
+				EFA910EA1AA6319000AA7045 /* SwiftyJSON.swift in Sources */,
+				BA757AC91A8E653800D4751C /* NSString+Base64Encoding.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA757AAF1A8E64A700D4751C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA757ABA1A8E64A700D4751C /* GradebookExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA757AB51A8E64A700D4751C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA757A9D1A8E64A700D4751C /* GradebookExample */;
+			targetProxy = BA757AB41A8E64A700D4751C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA757AA71A8E64A700D4751C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA757AA81A8E64A700D4751C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA757AAC1A8E64A700D4751C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA757AAD1A8E64A700D4751C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA757ABB1A8E64A700D4751C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA757ABC1A8E64A700D4751C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA757ABE1A8E64A700D4751C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = GradebookExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GradebookExample/GradebookExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA757ABF1A8E64A700D4751C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = GradebookExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GradebookExample/GradebookExample-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		BA757AC11A8E64A700D4751C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GradebookExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GradebookExample.app/GradebookExample";
+			};
+			name = Debug;
+		};
+		BA757AC21A8E64A700D4751C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GradebookExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GradebookExample.app/GradebookExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA757A991A8E64A700D4751C /* Build configuration list for PBXProject "GradebookExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA757ABB1A8E64A700D4751C /* Debug */,
+				BA757ABC1A8E64A700D4751C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA757ABD1A8E64A700D4751C /* Build configuration list for PBXNativeTarget "GradebookExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA757ABE1A8E64A700D4751C /* Debug */,
+				BA757ABF1A8E64A700D4751C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA757AC01A8E64A700D4751C /* Build configuration list for PBXNativeTarget "GradebookExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA757AC11A8E64A700D4751C /* Debug */,
+				BA757AC21A8E64A700D4751C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA757A961A8E64A700D4751C /* Project object */;
+}
