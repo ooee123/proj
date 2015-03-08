@@ -35,17 +35,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             for (index, section) in json["sections"] {
                 println(section["id"].stringValue)
             }
+            if let tabVC = window?.rootViewController as? UINavigationController {
+                for controller in tabVC.viewControllers {
+                    if let tableView = controller as? SectionsTableViewController {
+                        tableView.json = json
+                        tableView.loader = loader
+                    }
+                }
+            }
         }
         else {
             println("Auth failed!")
-        }
-        
-        
-        if let tabVC = window?.rootViewController as? UINavigationController {
-            for controller in tabVC.viewControllers {
-                if let tableView = controller as? SectionsTableViewController {
-                }
-            }
         }
         
         return true

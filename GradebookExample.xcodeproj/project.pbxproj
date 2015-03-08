@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9513634C1AAC394100AE22BB /* EnrollmentCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513634B1AAC394100AE22BB /* EnrollmentCollectionViewController.swift */; };
+		9513634E1AAC421700AE22BB /* EnrollmentViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513634D1AAC421700AE22BB /* EnrollmentViewCellTableViewCell.swift */; };
+		9550D5801AA8DA6900E7CF09 /* SectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550D57F1AA8DA6900E7CF09 /* SectionViewCell.swift */; };
 		BA757AA41A8E64A700D4751C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA757AA31A8E64A700D4751C /* AppDelegate.swift */; };
 		BA757AA91A8E64A700D4751C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA757AA71A8E64A700D4751C /* Main.storyboard */; };
 		BA757AAB1A8E64A700D4751C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA757AAA1A8E64A700D4751C /* Images.xcassets */; };
@@ -29,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9513634B1AAC394100AE22BB /* EnrollmentCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnrollmentCollectionViewController.swift; sourceTree = "<group>"; };
+		9513634D1AAC421700AE22BB /* EnrollmentViewCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnrollmentViewCellTableViewCell.swift; sourceTree = "<group>"; };
+		9550D57F1AA8DA6900E7CF09 /* SectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionViewCell.swift; sourceTree = "<group>"; };
 		BA757A9E1A8E64A700D4751C /* GradebookExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradebookExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA757AA21A8E64A700D4751C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA757AA31A8E64A700D4751C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +95,10 @@
 				EFA910E91AA6319000AA7045 /* SwiftyJSON.swift */,
 				BA757AA31A8E64A700D4751C /* AppDelegate.swift */,
 				BA757AA71A8E64A700D4751C /* Main.storyboard */,
+				9513634B1AAC394100AE22BB /* EnrollmentCollectionViewController.swift */,
+				9513634D1AAC421700AE22BB /* EnrollmentViewCellTableViewCell.swift */,
 				EFA910EB1AA6368000AA7045 /* SectionsTableViewController.swift */,
+				9550D57F1AA8DA6900E7CF09 /* SectionViewCell.swift */,
 				BA757AAA1A8E64A700D4751C /* Images.xcassets */,
 				BA757AAC1A8E64A700D4751C /* LaunchScreen.xib */,
 				BA757AA11A8E64A700D4751C /* Supporting Files */,
@@ -227,10 +236,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9550D5801AA8DA6900E7CF09 /* SectionViewCell.swift in Sources */,
 				EFA910EC1AA6368000AA7045 /* SectionsTableViewController.swift in Sources */,
 				BA757AA41A8E64A700D4751C /* AppDelegate.swift in Sources */,
+				9513634C1AAC394100AE22BB /* EnrollmentCollectionViewController.swift in Sources */,
 				BA757AC61A8E64BF00D4751C /* GradebookURLLoader.m in Sources */,
 				EFA910EA1AA6319000AA7045 /* SwiftyJSON.swift in Sources */,
+				9513634E1AAC421700AE22BB /* EnrollmentViewCellTableViewCell.swift in Sources */,
 				BA757AC91A8E653800D4751C /* NSString+Base64Encoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
