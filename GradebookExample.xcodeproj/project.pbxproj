@@ -16,6 +16,8 @@
 		9513635B1AAC5BAC00AE22BB /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951363591AAC5BAB00AE22BB /* Locksmith.swift */; };
 		9513635C1AAC5BAC00AE22BB /* LocksmithRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513635A1AAC5BAB00AE22BB /* LocksmithRequest.swift */; };
 		9513635E1AAD39D900AE22BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513635D1AAD39D900AE22BB /* LoginViewController.swift */; };
+		951690EA1AAF60BA0090AAD9 /* AllScoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951690E91AAF60BA0090AAD9 /* AllScoresTableViewController.swift */; };
+		951690EC1AAF61A30090AAD9 /* AllScoresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951690EB1AAF61A30090AAD9 /* AllScoresTableViewCell.swift */; };
 		9550D5801AA8DA6900E7CF09 /* SectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550D57F1AA8DA6900E7CF09 /* SectionViewCell.swift */; };
 		BA757AA41A8E64A700D4751C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA757AA31A8E64A700D4751C /* AppDelegate.swift */; };
 		BA757AA91A8E64A700D4751C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA757AA71A8E64A700D4751C /* Main.storyboard */; };
@@ -48,6 +50,8 @@
 		951363591AAC5BAB00AE22BB /* Locksmith.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locksmith.swift; sourceTree = "<group>"; };
 		9513635A1AAC5BAB00AE22BB /* LocksmithRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithRequest.swift; sourceTree = "<group>"; };
 		9513635D1AAD39D900AE22BB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		951690E91AAF60BA0090AAD9 /* AllScoresTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllScoresTableViewController.swift; sourceTree = "<group>"; };
+		951690EB1AAF61A30090AAD9 /* AllScoresTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllScoresTableViewCell.swift; sourceTree = "<group>"; };
 		9550D57F1AA8DA6900E7CF09 /* SectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionViewCell.swift; sourceTree = "<group>"; };
 		BA757A9E1A8E64A700D4751C /* GradebookExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradebookExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA757AA21A8E64A700D4751C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				EFA910E91AA6319000AA7045 /* SwiftyJSON.swift */,
 				BA757AA31A8E64A700D4751C /* AppDelegate.swift */,
 				BA757AA71A8E64A700D4751C /* Main.storyboard */,
+				951690E91AAF60BA0090AAD9 /* AllScoresTableViewController.swift */,
+				951690EB1AAF61A30090AAD9 /* AllScoresTableViewCell.swift */,
 				9513635D1AAD39D900AE22BB /* LoginViewController.swift */,
 				951363551AAC50B500AE22BB /* ScoresTableViewController.swift */,
 				951363571AAC50E800AE22BB /* ScoreTableViewCell.swift */,
@@ -260,6 +266,7 @@
 				9513635C1AAC5BAC00AE22BB /* LocksmithRequest.swift in Sources */,
 				9550D5801AA8DA6900E7CF09 /* SectionViewCell.swift in Sources */,
 				EFA910EC1AA6368000AA7045 /* SectionsTableViewController.swift in Sources */,
+				951690EC1AAF61A30090AAD9 /* AllScoresTableViewCell.swift in Sources */,
 				9513635E1AAD39D900AE22BB /* LoginViewController.swift in Sources */,
 				9513635B1AAC5BAC00AE22BB /* Locksmith.swift in Sources */,
 				951363541AAC4AA000AE22BB /* AssignmentTableViewCell.swift in Sources */,
@@ -269,6 +276,7 @@
 				EFA910EA1AA6319000AA7045 /* SwiftyJSON.swift in Sources */,
 				9513634E1AAC421700AE22BB /* EnrollmentViewCellTableViewCell.swift in Sources */,
 				951363561AAC50B500AE22BB /* ScoresTableViewController.swift in Sources */,
+				951690EA1AAF60BA0090AAD9 /* AllScoresTableViewController.swift in Sources */,
 				951363501AAC4A0B00AE22BB /* AssignmentTableViewController.swift in Sources */,
 				951363581AAC50E800AE22BB /* ScoreTableViewCell.swift in Sources */,
 				BA757AC91A8E653800D4751C /* NSString+Base64Encoding.m in Sources */,

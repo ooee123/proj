@@ -19,8 +19,14 @@ class AssignmentTableViewCell: UITableViewCell {
             name = userscoreJSON["name"].stringValue
             possible = userscoreJSON["max_points"].intValue
             var scoresJSON = userscoreJSON["scores"].dictionary
-            yourScore = userscoreJSON["scores"][0]["score"].intValue
-            println(scoresJSON)
+            
+            for (index, score) in userscoreJSON["scores"] {
+                if (score["counts"].boolValue) {
+                    yourScore = score["score"].intValue
+                }
+            }
+            
+            //yourScore = userscoreJSON["scores"][0]["score"].intValue
             assignmentLabel.text = "\(name) \(yourScore) / \(possible)"
         }
     }

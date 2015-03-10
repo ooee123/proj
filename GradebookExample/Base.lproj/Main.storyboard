@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gXq-ao-EpM">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
+        <!--Split View Controller-->
+        <scene sceneID="It8-eK-L80">
+            <objects>
+                <splitViewController id="IFI-Ot-a0o" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="gXq-ao-EpM" kind="relationship" relationship="detailViewController" id="lu2-id-kvH"/>
+                        <segue destination="Jjr-40-S8a" kind="relationship" relationship="masterViewController" id="Uf9-mY-SqR"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xUu-5B-Qpn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-947" y="890"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="khU-Gz-Ewp">
             <objects>
@@ -35,7 +49,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="6EJ-o0-IB4">
                                 <rect key="frame" x="16" y="72" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="alphabet" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://users.csc.calpoly.edu/~bellardo/cgi-bin/test/grades.json" borderStyle="roundedRect" placeholder="JSON URL" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Uv9-TT-yVX">
                                 <rect key="frame" x="16" y="148" width="568" height="30"/>
@@ -62,7 +76,7 @@
                                         </attributes>
                                     </fragment>
                                 </attributedString>
-                                <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -77,6 +91,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zD-oL-dw9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="689" y="295"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wpm-kc-cz0">
+            <objects>
+                <navigationController id="Jjr-40-S8a" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YBE-Oh-Ckw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QhC-tf-rrP" kind="relationship" relationship="rootViewController" id="VFa-Ez-GiT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N0w-p5-aSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-27" y="1296"/>
         </scene>
         <!--Sections-->
         <scene sceneID="WbF-96-iZq">
@@ -196,6 +226,32 @@
             </objects>
             <point key="canvasLocation" x="2815" y="293"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="N4R-d6-lWt">
+            <objects>
+                <tableViewController id="CpA-sM-aQy" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="AD4-by-uW0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ezN-SI-JJC">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ezN-SI-JJC" id="gGk-XW-L1m">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CpA-sM-aQy" id="KbP-Bi-vBx"/>
+                            <outlet property="delegate" destination="CpA-sM-aQy" id="z8Y-SP-uKG"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pLW-A5-WY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3439" y="295"/>
+        </scene>
         <!--Score Stats-->
         <scene sceneID="FWE-rI-8mI">
             <objects>
@@ -228,10 +284,14 @@
                             <outlet property="delegate" destination="QhC-tf-rrP" id="fww-U1-ypz"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="AgF-KX-zAE"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtd-Kg-cTQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3483" y="291"/>
+            <point key="canvasLocation" x="4071" y="291"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="VFa-Ez-GiT"/>
+    </inferredMetricsTieBreakers>
 </document>
