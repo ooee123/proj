@@ -16,38 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-        let loader = GradebookURLLoader()
-        
-        // Live data URL
-        // loader.baseURL = "https://users.csc.calpoly.edu/~bellardo/cgi-bin/grades.json"
-        
-        // Test data URL
-        loader.baseURL = "https://users.csc.calpoly.edu/~bellardo/cgi-bin/test/grades.json"
-        if loader.loginWithUsername("test", andPassword: "kj34mns04d") {
-            println("Auth worked!")
-            let data = loader.loadDataFromPath("?record=sections", error: nil)
-            
-            let str = NSString(data: data, encoding: NSUTF8StringEncoding)
-       
-            //println("Data: \(str)")
-            let json = JSON(data: data)
-            for (index, section) in json["sections"] {
-                println(section["id"].stringValue)
-            }
-            if let tabVC = window?.rootViewController as? UINavigationController {
-                for controller in tabVC.viewControllers {
-                    if let tableView = controller as? SectionsTableViewController {
-                        tableView.json = json
-                        tableView.loader = loader
-                    }
-                }
-            }
-        }
-        else {
-            println("Auth failed!")
-        }
-        
         return true
     }
 

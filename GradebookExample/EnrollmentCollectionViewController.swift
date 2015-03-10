@@ -13,6 +13,8 @@ import UIKit
 class EnrollmentCollectionViewController: UITableViewController {
 
     var enrollmentsJSON : JSON = nil
+    var term : Int = 0
+    var course : Int = 0
     var loader : GradebookURLLoader = GradebookURLLoader()
     let reuseIdentifier = "EnrollmentCell"
     
@@ -84,20 +86,25 @@ class EnrollmentCollectionViewController: UITableViewController {
     }
     */
     
-    /*
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
-        if segue.identifier == "SectionDetailSegue" {
-            let cell = sender as EnrollmentCollectionViewController
-            let dest = segue.destinationViewController as EnrollmentCollectionViewController
-            let term = cell.term
-            let course = cell.course
-            let data = loader.loadDataFromPath("?record=enrollments&term=\(term)&course=\(course)", error: nil)
+        if segue.identifier == "EnrollmentDetailSegue" {
+            let cell = sender as EnrollmentViewCellTableViewCell
+            let dest = segue.destinationViewController as AssignmentTableViewController
+            let user = cell.enrollment["csc_username"].stringValue
+
+            
+            let data = loader.loadDataFromPath("?record=userscores&term=\(term)&course=\(course)&user=\(user)", error: nil)
             
             let str = NSString(data: data, encoding: NSUTF8StringEncoding)
-            dest.enrollments = JSON(data: data)
+            println(str)
+            dest.userscoresJSON = JSON(data: data)
+            dest.term = term
+            dest.course = course
+            dest.loader = loader
         }
         // Pass the selected object to the new view controller.
     }
-    */
+    
 }

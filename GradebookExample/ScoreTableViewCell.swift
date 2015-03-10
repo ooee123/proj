@@ -1,5 +1,5 @@
 //
-//  EnrollmentViewCellTableViewCell.swift
+//  ScoreTableViewCell.swift
 //  GradebookExample
 //
 //  Created by Classroom Tech User on 3/8/15.
@@ -8,14 +8,13 @@
 
 import UIKit
 
-class EnrollmentViewCellTableViewCell: UITableViewCell {
-    @IBOutlet weak var enrollmentsLabel: UILabel!
+class ScoreTableViewCell: UITableViewCell {
 
-    var enrollment : JSON = nil {
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    var labelText : String = "" {
         didSet {
-            let first = enrollment["first_name"].stringValue
-            let last = enrollment["last_name"].stringValue
-            enrollmentsLabel.text = "\(first) \(last)"
+            scoreLabel.text = labelText
         }
     }
     override func awakeFromNib() {
@@ -27,6 +26,10 @@ class EnrollmentViewCellTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func prepareForReuse() {
+        scoreLabel.text = ""
     }
 
 }

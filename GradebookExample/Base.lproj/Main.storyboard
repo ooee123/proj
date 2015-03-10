@@ -13,17 +13,75 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="sLK-Hj-av1" kind="relationship" relationship="rootViewController" id="s6i-uZ-6Zi"/>
+                        <segue destination="MSQ-sA-rJ2" kind="relationship" relationship="rootViewController" id="5Xl-be-0Cc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Flp-dH-ozc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="721" y="300"/>
+            <point key="canvasLocation" x="-93" y="291"/>
         </scene>
-        <!--Sections Table View Controller-->
+        <!--Login-->
+        <scene sceneID="Wg1-u8-aj8">
+            <objects>
+                <viewController title="Login" id="MSQ-sA-rJ2" customClass="LoginViewController" customModule="GradebookExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7a-mD-Pue"/>
+                        <viewControllerLayoutGuide type="bottom" id="CNl-a4-uCl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V8T-hi-gAA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="6EJ-o0-IB4">
+                                <rect key="frame" x="16" y="72" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="alphabet" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://users.csc.calpoly.edu/~bellardo/cgi-bin/test/grades.json" borderStyle="roundedRect" placeholder="JSON URL" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Uv9-TT-yVX">
+                                <rect key="frame" x="16" y="148" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f45-c2-OG9">
+                                <rect key="frame" x="16" y="186" width="43" height="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sLK-Hj-av1" kind="show" identifier="LoginSegue" id="k5B-Ml-soi"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="PDP-Xl-8sM">
+                                <rect key="frame" x="16" y="110" width="568" height="30"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="kj34mns04d">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sXc-hD-VoL"/>
+                    <connections>
+                        <outlet property="JSONurl" destination="Uv9-TT-yVX" id="AhE-67-5ak"/>
+                        <outlet property="password" destination="PDP-Xl-8sM" id="f5r-iS-Xa3"/>
+                        <outlet property="username" destination="6EJ-o0-IB4" id="wpa-XJ-WNQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0zD-oL-dw9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="689" y="295"/>
+        </scene>
+        <!--Sections-->
         <scene sceneID="WbF-96-iZq">
             <objects>
-                <tableViewController id="sLK-Hj-av1" customClass="SectionsTableViewController" customModule="GradebookExample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Sections" id="sLK-Hj-av1" customClass="SectionsTableViewController" customModule="GradebookExample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="991-JC-zGh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="1447" y="296"/>
         </scene>
-        <!--Enrollment Collection View Controller-->
+        <!--Enrollments-->
         <scene sceneID="EBb-fJ-TGw">
             <objects>
-                <tableViewController id="doN-Cw-CAV" customClass="EnrollmentCollectionViewController" customModule="GradebookExample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Enrollments" id="doN-Cw-CAV" customClass="EnrollmentCollectionViewController" customModule="GradebookExample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OaN-At-0sA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,6 +144,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="enrollmentsLabel" destination="yut-LS-Noo" id="XrS-b0-JNZ"/>
+                                    <segue destination="xOT-Qo-lO1" kind="show" identifier="EnrollmentDetailSegue" id="w5e-sk-VLr"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -98,6 +157,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nVo-zF-auk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2125" y="295"/>
+        </scene>
+        <!--Assignments-->
+        <scene sceneID="f8N-HV-QKE">
+            <objects>
+                <tableViewController title="Assignments" id="xOT-Qo-lO1" customClass="AssignmentTableViewController" customModule="GradebookExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DiI-Xf-Qmz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AssignmentCell" id="Jrl-wn-1Vs" customClass="AssignmentTableViewCell" customModule="GradebookExample" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jrl-wn-1Vs" id="oq1-fJ-I5r">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Assignment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4J-L0-Kod">
+                                            <rect key="frame" x="8" y="13" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="assignmentLabel" destination="d4J-L0-Kod" id="fJZ-h9-GIG"/>
+                                    <segue destination="QhC-tf-rrP" kind="show" identifier="ScoresDetailSegue" id="vjZ-tH-RNz"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xOT-Qo-lO1" id="uMo-vO-GHt"/>
+                            <outlet property="delegate" destination="xOT-Qo-lO1" id="Esp-kS-SWN"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dqp-Ga-aPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2815" y="293"/>
+        </scene>
+        <!--Score Stats-->
+        <scene sceneID="FWE-rI-8mI">
+            <objects>
+                <tableViewController title="Score Stats" id="QhC-tf-rrP" customClass="ScoresTableViewController" customModule="GradebookExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ss6-46-zmh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScoreCell" id="Jpp-ak-4ib" customClass="ScoreTableViewCell" customModule="GradebookExample" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jpp-ak-4ib" id="k9g-nN-Dem">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K77-f3-EgM">
+                                            <rect key="frame" x="8" y="13" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="scoreLabel" destination="K77-f3-EgM" id="bt7-4v-M50"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QhC-tf-rrP" id="HUQ-VS-bYZ"/>
+                            <outlet property="delegate" destination="QhC-tf-rrP" id="fww-U1-ypz"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mtd-Kg-cTQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3483" y="291"/>
         </scene>
     </scenes>
 </document>

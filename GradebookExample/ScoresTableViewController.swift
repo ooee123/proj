@@ -1,21 +1,38 @@
 //
-//  SectionsTableViewController.swift
+//  ScoresTableViewController.swift
 //  GradebookExample
 //
-//  Created by student5 on 3/3/15.
+//  Created by Classroom Tech User on 3/8/15.
 //  Copyright (c) 2015 John Bellardo. All rights reserved.
 //
 
 import UIKit
 
+class ScoresTableViewController: UITableViewController {
 
-
-class SectionsTableViewController: UITableViewController, UITableViewDelegate {
-
-    let reuseIdentifier = "SectionCell"
-    var loader : GradebookURLLoader = GradebookURLLoader()
-    var json : JSON = nil
+    var statsJSON : JSON = nil {
+        didSet {
+            let asnstats = statsJSON["asnstats"]
+            possible = asnstats["points"].intValue
+            min = asnstats["min_score"].intValue
+            max = asnstats["max_score"].intValue
+            mean = asnstats["mean_score"].doubleValue
+            median = asnstats["median_score"].doubleValue
+            stdDev = asnstats["std_dev"].doubleValue
+            attempts = asnstats["attempts"].intValue
+        }
+    }
+    var yourScore : Int = 0
+    var possible : Int = 0
+    var min : Int = 0
+    var max : Int = 0
+    var mean : Double = 0.0
+    var median : Double = 0.0
+    var stdDev : Double = 0.0
+    var attempts : Int = 0
     
+    var name : String = ""
+    let reuseIdentifier = "ScoreCell"
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,24 +53,52 @@ class SectionsTableViewController: UITableViewController, UITableViewDelegate {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 1
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return json["sections"].count
+        if section == 0 {
+            return 1
+        }
+        if section == 1 {
+            return 7
+        }
+        return 0
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as SectionViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as ScoreTableViewCell
 
         // Configure the cell...
-        cell.sectionJSON = json["sections"][indexPath.row]
-        
+        if indexPath.section == 0 {
+            cell.labelText = "Your score: \(yourScore) / \(possible)"
+        }
+        else if indexPath.section == 1 {
+            switch (indexPath.row + 1) {
+            case 1:
+                cell.labelText = "Total Possible Points: \(possible)"
+            case 2:
+                cell.labelText = "Mean Score \(mean)"
+            case 3:
+                cell.labelText = "Min Score \(min)"
+            case 4:
+                cell.labelText = "Max Score \(max)"
+            case 5:
+                cell.labelText = "Median Score \(median)"
+            case 6:
+                cell.labelText = "Standard Deviation \(stdDev)"
+            case 7:
+                cell.labelText = "Attempts \(attempts)"
+            default:
+                cell.labelText = "OUT OF BOUNDS"
+            }
+        }
         return cell
     }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -90,26 +135,14 @@ class SectionsTableViewController: UITableViewController, UITableViewDelegate {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
-        if segue.identifier == "SectionDetailSegue" {
-            let cell = sender as SectionViewCell
-            let dest = segue.destinationViewController as EnrollmentCollectionViewController
-            let term = cell.term
-            let course = cell.course
-            let data = loader.loadDataFromPath("?record=enrollments&term=\(term)&course=\(course)", error: nil)
-            
-            dest.term = term
-            dest.course = course
-            dest.enrollmentsJSON = JSON(data: data)
-            dest.loader = loader
-        }
         // Pass the selected object to the new view controller.
     }
-    
+    */
 
 }

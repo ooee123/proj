@@ -1,20 +1,20 @@
 //
-//  SectionsTableViewController.swift
+//  AssignmentTableViewController.swift
 //  GradebookExample
 //
-//  Created by student5 on 3/3/15.
+//  Created by Classroom Tech User on 3/8/15.
 //  Copyright (c) 2015 John Bellardo. All rights reserved.
 //
 
 import UIKit
 
+class AssignmentTableViewController: UITableViewController {
 
-
-class SectionsTableViewController: UITableViewController, UITableViewDelegate {
-
-    let reuseIdentifier = "SectionCell"
+    let reuseIdentifier = "AssignmentCell"
     var loader : GradebookURLLoader = GradebookURLLoader()
-    var json : JSON = nil
+    var userscoresJSON : JSON = nil
+    var term : Int = 0
+    var course : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,18 +42,18 @@ class SectionsTableViewController: UITableViewController, UITableViewDelegate {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return json["sections"].count
+        return userscoresJSON["userscores"].count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as SectionViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as AssignmentTableViewCell
 
         // Configure the cell...
-        cell.sectionJSON = json["sections"][indexPath.row]
-        
+        cell.userscoreJSON = userscoresJSON["userscores"][indexPath.row]
         return cell
     }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -96,17 +96,16 @@ class SectionsTableViewController: UITableViewController, UITableViewDelegate {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
-        if segue.identifier == "SectionDetailSegue" {
-            let cell = sender as SectionViewCell
-            let dest = segue.destinationViewController as EnrollmentCollectionViewController
-            let term = cell.term
-            let course = cell.course
-            let data = loader.loadDataFromPath("?record=enrollments&term=\(term)&course=\(course)", error: nil)
-            
-            dest.term = term
-            dest.course = course
-            dest.enrollmentsJSON = JSON(data: data)
-            dest.loader = loader
+        if segue.identifier == "ScoresDetailSegue" {
+            let sender = sender as AssignmentTableViewCell
+            let dest = segue.destinationViewController as ScoresTableViewController
+            let asnid = sender.userscoreJSON["id"].intValue
+            var path = "?record=asnstats&term=\(term)&course=\(course)&id=\(asnid)"
+
+            let data = loader.loadDataFromPath(path, error: nil)
+            dest.yourScore = sender.yourScore
+            dest.name = sender.name            
+            dest.statsJSON = JSON(data: data)
         }
         // Pass the selected object to the new view controller.
     }
