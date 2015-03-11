@@ -14,7 +14,11 @@ class SectionsTableViewController: UITableViewController, UITableViewDelegate {
 
     let reuseIdentifier = "SectionCell"
     var loader : GradebookURLLoader = GradebookURLLoader()
-    var json : JSON = nil
+    var json : JSON = nil {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

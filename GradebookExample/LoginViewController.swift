@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var JSONurl: UITextField!
+    let loader = GradebookURLLoader()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +28,46 @@ class LoginViewController: UIViewController {
 
     
     // MARK: - Navigation
+/*
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        if identifier == "LoginSegue" {
+            
+            if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+                let destNav = splitViewController?.viewControllers[0] as UINavigationController
+                let dest = destNav.viewControllers.first as SectionsTableViewController
+                
+                // Live data URL
+                
+                loader.baseURL = JSONurl.text
+                if loader.loginWithUsername(username.text, andPassword: password.text) {
+                    let data = loader.loadDataFromPath("?record=sections", error: nil)
+                    let json = JSON(data: data)
+                    
+                    dest.loader = loader
+                    dest.json = json
 
+                }
+                else
+                {
+                    println(username.text)
+                    println(password.text)
+                    println(JSONurl.text)
+                    println("Cannot authenticate")
+                }
+                let detail = splitViewController?.viewControllers.last as UIViewController
+                detail.performSegueWithIdentifier("iPadDetail", sender: self)
+            }
+
+        }
+        return true
+    }
+*/    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "LoginSegue" {
             let dest = segue.destinationViewController as SectionsTableViewController
-            let loader = GradebookURLLoader()
             
             // Live data URL
             loader.baseURL = JSONurl.text

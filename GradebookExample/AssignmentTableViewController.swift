@@ -13,6 +13,11 @@ class AssignmentTableViewController: UITableViewController {
     let reuseIdentifier = "AssignmentCell"
     var loader : GradebookURLLoader = GradebookURLLoader()
     var userscoresJSON : JSON = nil
+        {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     var term : Int = 0
     var course : Int = 0
     
@@ -98,7 +103,7 @@ class AssignmentTableViewController: UITableViewController {
             let sender = sender as AssignmentTableViewCell
         
             if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
-                let dest = splitViewController?.viewControllers[1] as ScoresTableViewController
+                let dest = (splitViewController?.viewControllers.last as UINavigationController).viewControllers.first as ScoresTableViewController
                 let asnid = sender.userscoreJSON["id"].intValue
                 var path = "?record=asnstats&term=\(term)&course=\(course)&id=\(asnid)"
                 let data = loader.loadDataFromPath(path, error: nil)
@@ -111,6 +116,7 @@ class AssignmentTableViewController: UITableViewController {
         }
         return false
     }
+
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].

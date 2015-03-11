@@ -85,7 +85,29 @@ class EnrollmentCollectionViewController: UITableViewController {
     return true
     }
     */
-    
+    /*
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        if (identifier == "EnrollmentDetailSegue") {
+            let cell = sender as EnrollmentViewCellTableViewCell
+            if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+                let destNav = splitViewController?.viewControllers.last as UINavigationController //AssignmentTableViewController
+                let dest = destNav.viewControllers.first as AssignmentTableViewController
+                let user = cell.enrollment["csc_username"].stringValue
+                let data = loader.loadDataFromPath("?record=userscores&term=\(term)&course=\(course)&user=\(user)", error: nil)
+                
+                let str = NSString(data: data, encoding: NSUTF8StringEncoding)
+                println(str)
+                dest.userscoresJSON = JSON(data: data)
+                dest.term = term
+                dest.course = course
+                dest.loader = loader
+                return false
+            }
+            return true
+        }
+        return false
+    }
+    */
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].

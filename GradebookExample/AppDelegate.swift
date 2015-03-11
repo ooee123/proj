@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
 
@@ -18,19 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
-            if let newRoot = window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("iPadMain") as? UISplitViewController {
+            if let newRoot = window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("iPadMain") as? iPadSplitViewController {
                 window?.rootViewController = newRoot
-                if let navVc = newRoot.viewControllers[0] as? UINavigationController {
-                    if let loginOverview = navVc.topViewController as? LoginViewController {
-
-                    }
-                    
-                }
+                newRoot.delegate = self
             }
         }
-        else {
-        }
-
         
         return true
     }
@@ -57,6 +49,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func primaryViewControllerForCollapsingSplitViewController(splitViewController: UISplitViewController) -> UIViewController? {
+        return splitViewController.viewControllers.first as? UIViewController
+    }
+    
+    
 }
 

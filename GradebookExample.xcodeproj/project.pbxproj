@@ -28,6 +28,7 @@
 		BA757AC91A8E653800D4751C /* NSString+Base64Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = BA757AC81A8E653800D4751C /* NSString+Base64Encoding.m */; };
 		EFA910EA1AA6319000AA7045 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA910E91AA6319000AA7045 /* SwiftyJSON.swift */; };
 		EFA910EC1AA6368000AA7045 /* SectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA910EB1AA6368000AA7045 /* SectionsTableViewController.swift */; };
+		EFF9F9551AB0FFE3002022D8 /* iPadSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF9F9541AB0FFE3002022D8 /* iPadSplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		BA757AC81A8E653800D4751C /* NSString+Base64Encoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64Encoding.m"; sourceTree = "<group>"; };
 		EFA910E91AA6319000AA7045 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		EFA910EB1AA6368000AA7045 /* SectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsTableViewController.swift; sourceTree = "<group>"; };
+		EFF9F9541AB0FFE3002022D8 /* iPadSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iPadSplitViewController.swift; path = ../iPadSplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		BA757AA01A8E64A700D4751C /* GradebookExample */ = {
 			isa = PBXGroup;
 			children = (
+				EFF9F9541AB0FFE3002022D8 /* iPadSplitViewController.swift */,
 				951363591AAC5BAB00AE22BB /* Locksmith.swift */,
 				9513635A1AAC5BAB00AE22BB /* LocksmithRequest.swift */,
 				EFA910E91AA6319000AA7045 /* SwiftyJSON.swift */,
@@ -266,6 +269,7 @@
 				9513635C1AAC5BAC00AE22BB /* LocksmithRequest.swift in Sources */,
 				9550D5801AA8DA6900E7CF09 /* SectionViewCell.swift in Sources */,
 				EFA910EC1AA6368000AA7045 /* SectionsTableViewController.swift in Sources */,
+				EFF9F9551AB0FFE3002022D8 /* iPadSplitViewController.swift in Sources */,
 				951690EC1AAF61A30090AAD9 /* AllScoresTableViewCell.swift in Sources */,
 				9513635E1AAD39D900AE22BB /* LoginViewController.swift in Sources */,
 				9513635B1AAC5BAC00AE22BB /* Locksmith.swift in Sources */,
