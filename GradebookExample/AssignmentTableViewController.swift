@@ -93,6 +93,24 @@ class AssignmentTableViewController: UITableViewController {
     
     // MARK: - Navigation
 
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        if (identifier == "ScoresDetailSegue") {
+            let sender = sender as AssignmentTableViewCell
+        
+            if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+                let dest = splitViewController?.viewControllers[1] as ScoresTableViewController
+                let asnid = sender.userscoreJSON["id"].intValue
+                var path = "?record=asnstats&term=\(term)&course=\(course)&id=\(asnid)"
+                let data = loader.loadDataFromPath(path, error: nil)
+                dest.yourScore = sender.yourScore
+                dest.name = sender.name
+                dest.statsJSON = JSON(data: data)
+                return false
+            }
+            return true
+        }
+        return false
+    }
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
@@ -107,6 +125,7 @@ class AssignmentTableViewController: UITableViewController {
             dest.name = sender.name            
             dest.statsJSON = JSON(data: data)
         }
+        
         // Pass the selected object to the new view controller.
     }
     

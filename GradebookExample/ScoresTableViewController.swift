@@ -20,6 +20,7 @@ class ScoresTableViewController: UITableViewController {
             median = asnstats["median_score"].doubleValue
             stdDev = asnstats["std_dev"].doubleValue
             attempts = asnstats["attempts"].intValue
+            self.tableView?.reloadData()
         }
     }
     var yourScore : Int = 0
@@ -59,6 +60,9 @@ class ScoresTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
+        if statsJSON == nil {
+            return 0
+        }
         if section == 0 {
             return 1
         }

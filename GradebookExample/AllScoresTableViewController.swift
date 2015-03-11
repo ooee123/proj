@@ -55,11 +55,12 @@ class AllScoresTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as AllScoresTableViewCell
-
+/*
         // Configure the cell...
         if (indexPath.row == 0)
         {
             cell.row = scores["scores"][countsIndex]
+                scores["scores"][countsIndex]
         }
         else
         {
@@ -71,6 +72,7 @@ class AllScoresTableViewController: UITableViewController {
                 cell.row = indexPath.row - 1
             }
         }
+*/
         return cell
     }
     

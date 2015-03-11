@@ -8,15 +8,15 @@
         <!--Split View Controller-->
         <scene sceneID="It8-eK-L80">
             <objects>
-                <splitViewController id="IFI-Ot-a0o" sceneMemberID="viewController">
+                <splitViewController storyboardIdentifier="iPadMain" id="IFI-Ot-a0o" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="gXq-ao-EpM" kind="relationship" relationship="detailViewController" id="lu2-id-kvH"/>
-                        <segue destination="Jjr-40-S8a" kind="relationship" relationship="masterViewController" id="Uf9-mY-SqR"/>
+                        <segue destination="QhC-tf-rrP" kind="relationship" relationship="detailViewController" id="stZ-zX-L6b"/>
+                        <segue destination="gXq-ao-EpM" kind="relationship" relationship="masterViewController" id="Fo3-jb-KDP"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUu-5B-Qpn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-947" y="890"/>
+            <point key="canvasLocation" x="-225" y="-598"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="khU-Gz-Ewp">
@@ -91,22 +91,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zD-oL-dw9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="689" y="295"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="wpm-kc-cz0">
-            <objects>
-                <navigationController id="Jjr-40-S8a" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YBE-Oh-Ckw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="QhC-tf-rrP" kind="relationship" relationship="rootViewController" id="VFa-Ez-GiT"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N0w-p5-aSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-27" y="1296"/>
         </scene>
         <!--Sections-->
         <scene sceneID="WbF-96-iZq">
@@ -224,7 +208,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dqp-Ga-aPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2815" y="293"/>
+            <point key="canvasLocation" x="2779" y="296"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="N4R-d6-lWt">
@@ -250,7 +234,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pLW-A5-WY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3439" y="295"/>
+            <point key="canvasLocation" x="3436" y="1056"/>
         </scene>
         <!--Score Stats-->
         <scene sceneID="FWE-rI-8mI">
@@ -288,10 +272,10 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtd-Kg-cTQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4071" y="291"/>
+            <point key="canvasLocation" x="3447" y="295"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VFa-Ez-GiT"/>
+        <segue reference="vjZ-tH-RNz"/>
     </inferredMetricsTieBreakers>
 </document>

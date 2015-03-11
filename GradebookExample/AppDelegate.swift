@@ -16,6 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            if let newRoot = window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("iPadMain") as? UISplitViewController {
+                window?.rootViewController = newRoot
+                if let navVc = newRoot.viewControllers[0] as? UINavigationController {
+                    if let loginOverview = navVc.topViewController as? LoginViewController {
+
+                    }
+                    
+                }
+            }
+        }
+        else {
+        }
+
+        
         return true
     }
 
