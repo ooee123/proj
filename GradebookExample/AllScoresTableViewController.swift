@@ -9,7 +9,6 @@
 import UIKit
 
 class AllScoresTableViewController: UITableViewController {
-
     let reuseIdentifier = "AllScoresCell"
     var countsIndex : Int = 0
     var scoresJSON : JSON = nil {
@@ -31,6 +30,7 @@ class AllScoresTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem()
     }
 
     override func didReceiveMemoryWarning() {

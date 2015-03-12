@@ -182,7 +182,20 @@
                             <outlet property="delegate" destination="3Re-0w-DKH" id="WbO-Td-ehX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="7Td-xd-m8d"/>
+                    <navigationItem key="navigationItem" id="7Td-xd-m8d">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="CJ6-D7-0xk">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vde-2R-ETC">
+                                <rect key="frame" x="-23" y="-15" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleToolbar:" destination="3Re-0w-DKH" eventType="touchUpInside" id="aPY-kf-3Ic"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZo-W5-b5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

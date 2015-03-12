@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
             if let newRoot = window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("iPadMain") as? iPadSplitViewController {
                 window?.rootViewController = newRoot
+                let detail = (newRoot.viewControllers.last as UINavigationController).viewControllers.first as AllScoresTableViewController
+                detail.toolbarItems?.append(newRoot.displayModeButtonItem())
             }
         }
         
