@@ -143,27 +143,38 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="QhC-tf-rrP" kind="relationship" relationship="rootViewController" id="zK2-Nk-PnD"/>
+                        <segue destination="3Re-0w-DKH" kind="relationship" relationship="rootViewController" id="S01-m2-ee4"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C11-ci-hYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="733" y="-577"/>
         </scene>
-        <!--Scores Table View Controller-->
+        <!--All Scores Table View Controller-->
         <scene sceneID="YYe-RA-rpE">
             <objects>
-                <tableViewController id="3Re-0w-DKH" customClass="ScoresTableViewController" customModule="GradebookExample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="3Re-0w-DKH" customClass="AllScoresTableViewController" customModule="GradebookExample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="znz-sw-lHN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="U3p-Nc-vz9">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllScoresCell" id="U3p-Nc-vz9" customClass="AllScoresTableViewCell" customModule="GradebookExample" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U3p-Nc-vz9" id="nWQ-jB-DjL">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scores" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RO6-yb-t1a">
+                                            <rect key="frame" x="8" y="12" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="scoresLabel" destination="RO6-yb-t1a" id="qCL-QR-4LA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -171,10 +182,11 @@
                             <outlet property="delegate" destination="3Re-0w-DKH" id="WbO-Td-ehX"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="7Td-xd-m8d"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZo-W5-b5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2205" y="-554"/>
+            <point key="canvasLocation" x="2553" y="-560"/>
         </scene>
         <!--Enrollments-->
         <scene sceneID="EBb-fJ-TGw">
@@ -229,7 +241,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Assignment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4J-L0-Kod">
-                                            <rect key="frame" x="8" y="13" width="584" height="21"/>
+                                            <rect key="frame" x="8" y="14" width="584" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -238,7 +250,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="assignmentLabel" destination="d4J-L0-Kod" id="fJZ-h9-GIG"/>
-                                    <segue destination="QhC-tf-rrP" kind="show" identifier="ScoresDetailSegue" id="vjZ-tH-RNz"/>
+                                    <segue destination="3Re-0w-DKH" kind="show" identifier="AllScoresSegue" id="rmT-G2-jFy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -277,7 +289,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pLW-A5-WY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3436" y="1056"/>
+            <point key="canvasLocation" x="3138" y="1054"/>
         </scene>
         <!--Score Stats-->
         <scene sceneID="FWE-rI-8mI">
@@ -319,6 +331,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zK2-Nk-PnD"/>
+        <segue reference="rmT-G2-jFy"/>
     </inferredMetricsTieBreakers>
 </document>

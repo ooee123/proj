@@ -9,8 +9,21 @@
 import UIKit
 
 class AllScoresTableViewCell: UITableViewCell {
+    @IBOutlet weak var scoresLabel: UILabel!
 
-    var row : Int = 0
+    var counts : Bool = false
+    var score : Int = 0 {
+        didSet {
+            var text : String = ""
+            if counts {
+                text = "Counting score: \(score)"
+            }
+            else {
+                text = "Attempt: \(score)"
+            }
+            scoresLabel.text = text
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

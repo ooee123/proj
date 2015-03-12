@@ -12,14 +12,14 @@ class AllScoresTableViewController: UITableViewController {
 
     let reuseIdentifier = "AllScoresCell"
     var countsIndex : Int = 0
-    var scores : JSON = nil {
+    var scoresJSON : JSON = nil {
         didSet {
-            for (index, score) in scores["scores"] {
+            for (index, score) in scoresJSON["scores"] {
                 if score["counts"].boolValue == true {
                     countsIndex = 0
-                    return
                 }
             }
+            tableView.reloadData()
         }
     }
     
@@ -43,36 +43,35 @@ class AllScoresTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 1
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return scores.count
+        if (section == 0 && scoresJSON != nil)
+        {
+            return 1
+        }
+        return scoresJSON["scores"].count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as AllScoresTableViewCell
-/*
+
         // Configure the cell...
-        if (indexPath.row == 0)
-        {
-            cell.row = scores["scores"][countsIndex]
-                scores["scores"][countsIndex]
+        if indexPath.section == 0 {
+            cell.counts = true
+            cell.score = scoresJSON["scores"][countsIndex]["score"].intValue
         }
         else
         {
-            if (indexPath.row < countsIndex) {
-                cell.row = indexPath.row
-            }
-            else
-            {
-                cell.row = indexPath.row - 1
-            }
+            cell.counts = false
+            cell.score = scoresJSON["scores"][indexPath.row]["score"].intValue
         }
-*/
+        
+
         return cell
     }
     

@@ -12,7 +12,7 @@ class iPadSplitViewController: UISplitViewController, UISplitViewControllerDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -32,5 +32,7 @@ class iPadSplitViewController: UISplitViewController, UISplitViewControllerDeleg
     }
     */
     
-    
+    func primaryViewControllerForCollapsingSplitViewController(splitViewController: UISplitViewController) -> UIViewController? {
+        return splitViewController.viewControllers.first as UIViewController
+    }
 }

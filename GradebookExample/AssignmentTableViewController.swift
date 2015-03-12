@@ -99,17 +99,20 @@ class AssignmentTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
-        if (identifier == "ScoresDetailSegue") {
+        if (identifier == "AllScoresSegue") {
             let sender = sender as AssignmentTableViewCell
         
             if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
-                let dest = (splitViewController?.viewControllers.last as UINavigationController).viewControllers.first as ScoresTableViewController
+                let dest = (splitViewController?.viewControllers.last as UINavigationController).viewControllers.first as AllScoresTableViewController
                 let asnid = sender.userscoreJSON["id"].intValue
                 var path = "?record=asnstats&term=\(term)&course=\(course)&id=\(asnid)"
                 let data = loader.loadDataFromPath(path, error: nil)
+                dest.scoresJSON = sender.userscoreJSON
+                /*
                 dest.yourScore = sender.yourScore
                 dest.name = sender.name
                 dest.statsJSON = JSON(data: data)
+*/
                 return false
             }
             return true
@@ -120,16 +123,20 @@ class AssignmentTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
-        if segue.identifier == "ScoresDetailSegue" {
+        if segue.identifier == "AllScoresSegue" {
             let sender = sender as AssignmentTableViewCell
-            let dest = segue.destinationViewController as ScoresTableViewController
+            let dest = segue.destinationViewController as AllScoresTableViewController
             let asnid = sender.userscoreJSON["id"].intValue
             var path = "?record=asnstats&term=\(term)&course=\(course)&id=\(asnid)"
 
             let data = loader.loadDataFromPath(path, error: nil)
+            //dest.scoresJSON = JSON(data: data)
+            dest.scoresJSON = sender.userscoreJSON
+            /*
             dest.yourScore = sender.yourScore
             dest.name = sender.name            
             dest.statsJSON = JSON(data: data)
+            */
         }
         
         // Pass the selected object to the new view controller.

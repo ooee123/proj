@@ -26,8 +26,7 @@ class AssignmentTableViewCell: UITableViewCell {
                 }
             }
             
-            //yourScore = userscoreJSON["scores"][0]["score"].intValue
-            assignmentLabel.text = "\(name) \(yourScore) / \(possible)"
+            assignmentLabel.text = "\(name)" //" \(yourScore) / \(possible)"
         }
     }
     
